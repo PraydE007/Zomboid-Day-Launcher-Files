@@ -1,0 +1,48 @@
+{
+  "project": {
+    "name": "Zomboid Day",
+    "version": "1.0.0",
+    "description": "Основний пакет конфігурації, оптимізації пам'яті та ZombieBuddy для лаунчера Zomboid Day",
+    "author": "PraydE007",
+    "target_game": "Project Zomboid",
+    "build_compatibility": "Build 41 / Build 42"
+  },
+  "install_steps": [
+    {
+      "id": "step_game_configs",
+      "order": 1,
+      "name": "Конфігураційні батники та налаштування пам'яті",
+      "description": "Встановлення оптимізованих файлів ProjectZomboid64.bat, ProjectZomboid64ShowConsole.bat та ProjectZomboid64.json у папку гри",
+      "type": "copy_dir_contents",
+      "source": "game-configuration-files",
+      "destination": "{GAME_DIR}",
+      "overwrite": true,
+      "backup": true
+    },
+    {
+      "id": "step_zombie_buddy",
+      "order": 2,
+      "name": "ZombieBuddy Java-Agent та zbNative DLL",
+      "description": "Встановлення ZombieBuddy.jar та нативного завантажувача zbNative.dll у папку гри",
+      "type": "copy_dir_contents",
+      "source": "ZombieBuddy",
+      "destination": "{GAME_DIR}",
+      "overwrite": true,
+      "backup": true
+    }
+  ],
+  "validation": {
+    "required_files": [
+      "{GAME_DIR}/ProjectZomboid64.bat",
+      "{GAME_DIR}/ProjectZomboid64ShowConsole.bat",
+      "{GAME_DIR}/ProjectZomboid64.json",
+      "{GAME_DIR}/ZombieBuddy.jar",
+      "{GAME_DIR}/zbNative.dll"
+    ]
+  },
+  "launch": {
+    "default_executable": "{GAME_DIR}/ProjectZomboid64.bat",
+    "debug_executable": "{GAME_DIR}/ProjectZomboid64ShowConsole.bat",
+    "working_dir": "{GAME_DIR}"
+  }
+}
