@@ -9,8 +9,17 @@
   },
   "install_steps": [
     {
-      "id": "step_game_configs",
+      "id": "step_steam_workshop",
       "order": 1,
+      "name": "Збірка модифікацій у Steam Workshop",
+      "description": "Відкриття збірки модифікацій у клієнті Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3831192498",
+      "type": "open_url",
+      "url": "steam://url/CommunityFilePage/3831192498",
+      "fallback_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3831192498"
+    },
+    {
+      "id": "step_game_configs",
+      "order": 2,
       "name": "Конфігураційні батники та налаштування пам'яті",
       "description": "Встановлення оптимізованих файлів ProjectZomboid64.bat, ProjectZomboid64ShowConsole.bat та ProjectZomboid64.json у папку гри",
       "type": "copy_dir_contents",
@@ -21,7 +30,7 @@
     },
     {
       "id": "step_zombie_buddy",
-      "order": 2,
+      "order": 3,
       "name": "ZombieBuddy Java-Agent та zbNative DLL",
       "description": "Встановлення ZombieBuddy.jar та нативного завантажувача zbNative.dll у папку гри",
       "type": "copy_dir_contents",
