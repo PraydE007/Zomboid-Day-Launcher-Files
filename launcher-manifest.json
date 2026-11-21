@@ -20,13 +20,13 @@
     {
       "id": "step_game_configs",
       "order": 2,
-      "name": "Конфігураційні батники та налаштування пам'яті",
-      "description": "Встановлення оптимізованих файлів ProjectZomboid64.bat, ProjectZomboid64ShowConsole.bat та ProjectZomboid64.json у папку гри",
+      "name": "Оптимізовані скрипти запуску JVM",
+      "description": "Встановлення оптимізованих файлів ProjectZomboid64.bat та ProjectZomboid64ShowConsole.bat у папку лаунчера (zd-launcher)",
       "type": "copy_dir_contents",
       "source": "game-configuration-files",
-      "destination": "{GAME_DIR}",
+      "destination": "{LAUNCHER_DIR}",
       "overwrite": true,
-      "backup": true
+      "backup": false
     },
     {
       "id": "step_zombie_buddy",
@@ -42,16 +42,15 @@
   ],
   "validation": {
     "required_files": [
-      "{GAME_DIR}/ProjectZomboid64.bat",
-      "{GAME_DIR}/ProjectZomboid64ShowConsole.bat",
-      "{GAME_DIR}/ProjectZomboid64.json",
+      "{LAUNCHER_DIR}/ProjectZomboid64.bat",
+      "{LAUNCHER_DIR}/ProjectZomboid64ShowConsole.bat",
       "{GAME_DIR}/ZombieBuddy.jar",
       "{GAME_DIR}/zbNative.dll"
     ]
   },
   "launch": {
-    "default_executable": "{GAME_DIR}/ProjectZomboid64.bat",
-    "debug_executable": "{GAME_DIR}/ProjectZomboid64ShowConsole.bat",
+    "default_executable": "{LAUNCHER_DIR}/ProjectZomboid64.bat",
+    "debug_executable": "{LAUNCHER_DIR}/ProjectZomboid64ShowConsole.bat",
     "working_dir": "{GAME_DIR}"
   }
 }
