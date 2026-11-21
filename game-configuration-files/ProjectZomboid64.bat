@@ -1,7 +1,7 @@
-
 @setlocal enableextensions
 @cd /d "%~dp0"
 
+SET PATH=%~dp0;%~dp0jre64\bin;%~dp0win64;%PATH%
 SET _JAVA_OPTIONS=-agentlib:zbNative
 SET PZ_CLASSPATH=./;projectzomboid.jar
 
