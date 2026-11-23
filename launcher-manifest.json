@@ -1,7 +1,8 @@
 {
   "project": {
     "name": "Zomboid Day",
-    "version": "1.0.4",
+    "version": "1.1.0",
+    "launcher_version": "1.1.0",
     "description": "Основний пакет конфігурації, оптимізації пам'яті та ZombieBuddy для лаунчера Zomboid Day",
     "author": "PraydE007",
     "target_game": "Project Zomboid",
@@ -42,10 +43,26 @@
   ],
   "validation": {
     "required_files": [
-      "{LAUNCHER_DIR}/ProjectZomboid64.bat",
-      "{LAUNCHER_DIR}/ProjectZomboid64ShowConsole.bat",
-      "{GAME_DIR}/ZombieBuddy.jar",
-      "{GAME_DIR}/zbNative.dll"
+      {
+        "path": "{LAUNCHER_DIR}/ProjectZomboid64.bat",
+        "sha256": "c76a63be9f0126f7bd64e9f94abee32e0a9b3b9eaf275f83ac0a3b6d9cc61a6d",
+        "name": "ProjectZomboid64.bat"
+      },
+      {
+        "path": "{LAUNCHER_DIR}/ProjectZomboid64ShowConsole.bat",
+        "sha256": "cbedbf5d25077f53d8b1b0339ac0c7d8c2c2bd6eb37ff710cdfa3b791b3c74c4",
+        "name": "ProjectZomboid64ShowConsole.bat"
+      },
+      {
+        "path": "{GAME_DIR}/ZombieBuddy.jar",
+        "sha256": "eb79b9876332010733a8e0d7ce4fe0377846059a9e28859029e2a0fb449f6cf2",
+        "name": "ZombieBuddy.jar"
+      },
+      {
+        "path": "{GAME_DIR}/zbNative.dll",
+        "sha256": "c2ae9335e717ee24b2f4a40d1a3bf77f1519762a72a0459e766a2bbafc077f6c",
+        "name": "zbNative.dll"
+      }
     ]
   },
   "launch": {
