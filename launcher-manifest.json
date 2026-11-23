@@ -1,8 +1,8 @@
 {
   "project": {
     "name": "Zomboid Day",
-    "version": "1.1.0",
-    "launcher_version": "1.1.0",
+    "version": "1.1.1",
+    "launcher_version": "1.1.1",
     "description": "Основний пакет конфігурації, оптимізації пам'яті та ZombieBuddy для лаунчера Zomboid Day",
     "author": "PraydE007",
     "target_game": "Project Zomboid",
