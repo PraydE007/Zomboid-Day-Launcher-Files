@@ -12,8 +12,8 @@
     {
       "id": "step_steam_workshop",
       "order": 1,
-      "name": "Збірка модифікацій у Steam Workshop",
-      "description": "Відкриття збірки модифікацій у клієнті Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3831192498",
+      "name": "Steam Workshop Mod Collection",
+      "description": "Opens the Steam Workshop mod collection: https://steamcommunity.com/sharedfiles/filedetails/?id=3831192498",
       "type": "open_url",
       "url": "steam://url/CommunityFilePage/3831192498",
       "fallback_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3831192498"
@@ -21,8 +21,8 @@
     {
       "id": "step_game_configs",
       "order": 2,
-      "name": "Оптимізовані скрипти запуску JVM",
-      "description": "Встановлення оптимізованих файлів ProjectZomboid64.bat та ProjectZomboid64ShowConsole.bat у папку лаунчера (zd-launcher)",
+      "name": "Optimized JVM Launch Scripts",
+      "description": "Install optimized ProjectZomboid64.bat and ProjectZomboid64ShowConsole.bat scripts",
       "type": "copy_dir_contents",
       "source": "game-configuration-files",
       "destination": "{LAUNCHER_DIR}",
@@ -32,8 +32,8 @@
     {
       "id": "step_zombie_buddy",
       "order": 3,
-      "name": "ZombieBuddy Java-Agent та zbNative DLL",
-      "description": "Встановлення ZombieBuddy.jar та нативного завантажувача zbNative.dll у папку гри",
+      "name": "ZombieBuddy Java-Agent & zbNative DLL",
+      "description": "Install ZombieBuddy.jar and native loader zbNative.dll into game directory",
       "type": "copy_dir_contents",
       "source": "ZombieBuddy",
       "destination": "{GAME_DIR}",
